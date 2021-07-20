@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  background-color: #f0f0f0;
+}
+
+h1 {
+  margin-top: 30px 0px 50px;
+  text-align: center;
+}
+
+.faq-container {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.faq {
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  position: relative;
+  padding: 0.5rem 2rem;
+  margin: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 250ms ease-in;
+}
+
+.faq p {
+  display: block;
+}
+
+.faq p {
+  display: none;
+}
+
+.faq.active {
+  transition: all 250ms ease-in;
+  background-color: #fff;
+  box-shadow: 0px 3px 6px rgb(0, 0, 0, 0.1), 0px 3px 6px rgb(0, 0, 0, 0.1);
+}
+
+.faq.active p {
+  display: block;
+}
+
+.faq.active::after,
+.faq.active::before {
+  content: "\f075";
+  font-family: "Font Awesome 5 Free";
+  font-size: 5rem;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  opacity: 0.2;
+  color: rgb(141, 235, 141);
+}
+
+.faq.active::after {
+  top: -10px;
+  left: -20px;
+  transform: rotateY(180deg);
+}
+
+button {
+  transition: all 250ms ease-in;
+  position: absolute;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  top: 10%;
+}
+.fa-times {
+  background-color: rgb(150, 142, 142);
+  border-radius: 50%;
+  color: #fff;
+  padding: 10px;
+}
+
+.faq.active .fa-chevron-down {
+  display: none;
+}
+
+.faq.active .fa-times {
+  display: block;
+}
+
+.faq .fa-times {
+  display: none;
+}
